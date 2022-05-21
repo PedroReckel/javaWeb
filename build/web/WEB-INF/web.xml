@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>ValidarLogin</servlet-name>
+        <servlet-class>VideoAulaServlet.ValidarLogin</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Cadastrese</servlet-name>
+        <servlet-class>VideoAulaServlet.Cadastrese</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>sair</servlet-name>
+        <servlet-class>VideoAulaServlet.sair</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ValidarLogin</servlet-name>
+        <url-pattern>/ValidarLogin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Cadastrese</servlet-name>
+        <url-pattern>/Cadastrese</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>sair</servlet-name>
+        <url-pattern>/sair</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <context-param>
+        <param-name>javax.faces.STATE_SAVING_METHOD</param-name>
+        <param-value>client</param-value>
+    </context-param>
+</web-app>

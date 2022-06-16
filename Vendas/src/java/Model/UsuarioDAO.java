@@ -1,8 +1,9 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
-package Model;
+package model;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,27 +13,29 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import static model.ConexaoDao.getConexao;
+import static model.ConexaoDAO.getConexao;
 
 /**
  *
  * @author pedro
  */
-public class usuarioDAO {
+public class UsuarioDAO {
     Connection con;
-    
-    public usuarioDAO() {
+
+    public UsuarioDAO()  {
         try {
-            tihs.con = getConexao();
+            this.con = getConexao();
         } catch (SQLException ex) {
             Logger.getLogger(UsuarioDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
-    public List<Usarios> listar() {
-        List<Usarios> = new ArrayList<>();
+
+    public List<Usuarios> listar()  {
+        List<Usuarios> usuario = new ArrayList<>();
         try {
-            String sql = "SELECT * FROM Usuarios";
+           
+            
+            String sql = "SELECT * FROM usuarios";
             PreparedStatement stmt = con.prepareStatement(sql);
             ResultSet rs = stmt.executeQuery();
             while (rs.next()) {
@@ -44,13 +47,16 @@ public class usuarioDAO {
                 
                 usuario.add(new Usuarios(idusuario, nome, login, senha, perfil));
             }
+            
+           
         } catch (SQLException ex) {
             Logger.getLogger(UsuarioDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return usuario;
+         return usuario;
     }
     
     public void inserirUsuario(Usuarios usuario) throws SQLException {
+
         String sql = "INSERT INTO usuarios (nome,login,senha, perfil) values (?,?,?,?)";
         PreparedStatement stmt = con.prepareStatement(sql);
         
@@ -59,8 +65,9 @@ public class usuarioDAO {
         stmt.setString(3, usuario.getSenha());
         stmt.setString(4, usuario.getPerfil());
         stmt.executeUpdate();
-        
+
     }
+    
     public boolean atualizar(Usuarios usuario) throws SQLException {
         boolean linhaAtualizada;
 
@@ -114,3 +121,4 @@ public class usuarioDAO {
         return false;
     }
 }
+

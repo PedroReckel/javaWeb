@@ -1,6 +1,6 @@
 <%-- 
-    Document   : incluirUsuario
-    Created on : 4 de jun. de 2022, 14:29:55
+    Document   : index.jsp
+    Created on : 16/06/2022, 15:48:23
     Author     : pedro
 --%>
 
@@ -14,15 +14,14 @@
     <body>
         <form action="usuarioCrud.jsp" method="post">
             <label>Nome</label><br>
-            <input type="text" name="nome"></input><br>
+            <input type="text" name="nome"></input><br><br>
             <label>Login</label><br>
-            <input type="text" name="login"></input><br>
+            <input type="text" name="login"></input><br><br>
             <label>Senha</label><br>
-            <input type="text" name="senha"></input><br>
-            <label>Pefil</label><br>
-            <input type="text" name="perfil"></input><br>
+            <input type="password" name="senha"></input><br><br>
+            <label>Perfil</label><br>
+            <input type="text" name="perfil"></input><br><br>
             
-            <input type="submit" value="Adcionar"></input>
-        </form>
+            <input type="submit" value="Adicionar">
     </body>
 </html>

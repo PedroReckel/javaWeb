@@ -1,0 +1,84 @@
+@charset "utf-8";
+
+.paragrafo {
+    text-align: center;
+    margin: 30px;
+}
+
+.nav-link:hover {
+    font-size: larger;
+    color: black;
+    font-weight: 500;
+    background-color: rgba(0, 0, 255, 0.382);
+    border-radius: 10px;
+    margin: 5px;
+    transition-duration: 0.5s;
+}
+
+#btnEnviar:hover {
+    color: black;
+    background-color: rgba(0, 0, 255, 0.382);
+    border-radius: 5px;
+    transition-duration: 0.5s;
+}
+
+.btnAcao {
+    text-decoration: none;
+}
+
+.btnAcao:hover {
+    text-decoration: underline;
+    color: rgb(1, 1, 161);
+}
+
+.btnFinalizar {
+    padding: 1em;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    margin: 0 auto;
+}
+
+#btnComprar {
+    text-decoration: none;
+}
+
+#btnComprar:hover {
+    text-decoration: underline;
+    color: rgb(1, 1, 161);
+}
+
+.btnFinalizar:hover {
+    text-decoration: underline;
+    color: rgb(1, 1, 161);
+}
+
+#container {
+    width: 100%;
+    text-align: center;
+}
+
+#formPagamento {
+    border-radius: 5px;
+}
+
+#mensagemFinal {
+    text-align: center;
+    margin-top: 40px;
+}
+
+form {
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 10px;
+    background-color: rgb(212, 214, 246);
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.363);
+    max-width: 500px; /* Para deixar o formulário dinâmico */
+    margin: auto;    /* Para deixar o formulário centralizado */
+    width: 50%;      /* Para deixar o formulário centralizado */
+    padding: 10px;   /* Para deixar o formulário centralizado */
+}
+
+#qtdButton {
+    width: 50px;
+}

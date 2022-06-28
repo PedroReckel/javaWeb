@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Página HOME</title>
+        <style>
+            * {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Bem vindo(a) a nossa loja virtual</h1>
+        <h2>Registre-se abaixo:</h2>
+        <form action="addCliente.jsp" method="post">
+            <div>
+              <div>
+                <label>CPF: </label>
+              </div>
+              <div>
+                <input type="text" name="cpf" placeholder="Seu CPF...">
+              </div>
+            </div>
+            <div>
+              <div>
+                <label>Nome</label>
+              </div>
+              <div>
+                <input type="text" name="nome" placeholder="Seu nome...">
+              </div>
+            </div>
+
+            <div>
+                <div>
+                  <label>Endereço: </label>
+                </div>
+                <div>
+                  <input type="text" name="endereco" placeholder="Seu endereço...">
+                </div>
+            </div>
+
+            <div>
+                <div>
+                  <label>Data de nascimento: </label>
+                </div>
+                <div>
+                  <input type="date" name="data">
+                </div>
+            </div>
+            
+            <input type="submit" value="Entrar">
+
+            </form>
+    </body>
+</html>

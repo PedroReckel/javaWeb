@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Login usuário</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container mt-3">
+  <h2 class="paragrafo">Registre-se para entrar na nossa loja</h2>
+  <form action="addUsuario.jsp">
+    <div class="mb-3 mt-3">
+      <label for="cpf">CPF</label>
+      <input type="text" class="form-control" id="cpf" placeholder="Seu CPF" name="CPF">
+    </div>
+    <div class="mb-3">
+      <label for="pwd">Nome</label>
+      <input type="text" class="form-control" id="nome" placeholder="Seu nome" name="nome">
+    </div>
+    <div class="mb-3">
+        <label for="senha">Senha</label>
+        <input type="password" class="form-control" id="senha" placeholder="Sua senha" name="senha">
+      </div>
+    <button type="submit" class="btn btn-primary" id="btnEnviar">Enviar</button>
+  </form>
+</div>
+
+<script src="validacaoFormulario.js"></script>
+
+</body>
+</html>
